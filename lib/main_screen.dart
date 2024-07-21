@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:adhd_writing_app/interface.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -10,9 +11,15 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Main Screen'),
+    return const MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.amber,
+        body: SizedBox(
+          width: double.infinity,
+          child: Center(
+            child: Interface(),
+          ),
+        ),
       ),
     );
   }
