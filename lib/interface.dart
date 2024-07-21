@@ -14,7 +14,7 @@ class _InterfaceState extends State<Interface> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          'Writing App',
+          'Writing App - test branch',
           style: TextStyle(
             color: Colors.black,
             fontSize: 30,
