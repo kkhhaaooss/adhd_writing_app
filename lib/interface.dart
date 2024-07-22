@@ -1,3 +1,4 @@
+import 'package:adhd_writing_app/text_input.dart';
 import 'package:flutter/material.dart';
 
 class Interface extends StatefulWidget {
@@ -31,12 +32,7 @@ class _InterfaceState extends State<Interface> {
             ),
 
             // TODO(kkhhaaooss): implement text input box
-            const Text(
-              'Text Input box',
-              style: TextStyle(
-                color: Colors.black,
-              ),
-            ),
+            const TextInput(),
 
             // TODO(kkhhaaooss): implement pause/resume writing button
             ElevatedButton(
