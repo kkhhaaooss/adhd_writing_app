@@ -19,10 +19,11 @@ class _InterfaceState extends State<Interface> {
       width: double.infinity,
       child: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             // TODO(kkhhaaooss): implement circular timer widget
             TurnTimer(),
+            SizedBox(height: 40),
 
             // TODO(kkhhaaooss): implement last entered paragraph widget
             LastParagraph(),
