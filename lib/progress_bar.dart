@@ -12,7 +12,7 @@ class _ProgressBarState extends State<ProgressBar> {
   @override
   Widget build(BuildContext context) {
     return LinearProgressBar(
-      maxSteps: 6,
+      maxSteps: 20,
       progressType: LinearProgressBar.progressTypeLinear, // Use Linear progress
       currentStep: 1,
       progressColor: Colors.red,

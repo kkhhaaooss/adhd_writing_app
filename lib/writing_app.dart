@@ -12,6 +12,10 @@ class WritingApp extends StatefulWidget {
 class _WritingAppState extends State<WritingApp> {
   @override
   Widget build(BuildContext context) {
+    final AppBar appBar = AppBar(
+      title: const Text('Writing App With A Cool Name When I Think Of One'),
+      centerTitle: true,
+    );
     return MaterialApp(
       // TODO(kkhhaaooss): Separate theme data into separate file, updatable from settings
       theme: ThemeData(
@@ -27,12 +31,15 @@ class _WritingAppState extends State<WritingApp> {
         ),
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Writing App With A Cool Name When I Think Of One'),
-          centerTitle: true,
-        ),
+        appBar: appBar,
         backgroundColor: Colors.amber,
-        body: const Interface(),
+        body: SafeArea(
+          minimum: EdgeInsets.only(
+            top: appBar.preferredSize.height,
+          ),
+          top: true,
+          child: const Interface(),
+        ),
       ),
     );
   }

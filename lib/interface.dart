@@ -15,13 +15,21 @@ class Interface extends StatefulWidget {
 class _InterfaceState extends State<Interface> {
   @override
   Widget build(BuildContext context) {
-    final screenWidth = null;
-    return const SizedBox(
-      width: double.infinity,
+    final screenWidth = MediaQuery.sizeOf(context).width;
+    final screenHeight = MediaQuery.sizeOf(context).height;
+    final widthPadding = screenWidth * 0.05;
+    final heightPadding = screenHeight * 0.05;
+
+    return SizedBox(
+      width: screenWidth,
+      height: screenHeight,
       child: Center(
         child: Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Column(
+          padding: EdgeInsets.symmetric(
+            horizontal: widthPadding,
+            vertical: heightPadding,
+          ),
+          child: const Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               // TODO(kkhhaaooss): implement circular timer widget
