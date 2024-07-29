@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:linear_progress_bar/linear_progress_bar.dart';
 
 class ProgressBar extends StatefulWidget {
   const ProgressBar({super.key});
@@ -10,6 +11,13 @@ class ProgressBar extends StatefulWidget {
 class _ProgressBarState extends State<ProgressBar> {
   @override
   Widget build(BuildContext context) {
-    return const Text('Progress Bar');
+    return LinearProgressBar(
+      maxSteps: 6,
+      progressType: LinearProgressBar.progressTypeLinear, // Use Linear progress
+      currentStep: 1,
+      progressColor: Colors.red,
+      backgroundColor: Colors.grey,
+      borderRadius: BorderRadius.circular(10),
+    );
   }
 }

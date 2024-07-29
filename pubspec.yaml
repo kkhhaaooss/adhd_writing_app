@@ -11,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^6.2.1
+  linear_progress_bar: ^1.1.2
 
 dev_dependencies:
   flutter_test:
