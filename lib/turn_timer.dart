@@ -12,7 +12,8 @@ class _TurnTimerState extends State<TurnTimer> {
   @override
   Widget build(BuildContext context) {
     return const CircularTimer(
-      duration: Duration(seconds: 30),
+      repeat: true,
+      duration: Duration(minutes: 15),
       radius: 100,
     );
   }
