@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:circular_timer/circular_timer.dart';
 
 class TurnTimer extends StatefulWidget {
   const TurnTimer({super.key});
@@ -10,6 +11,9 @@ class TurnTimer extends StatefulWidget {
 class _TurnTimerState extends State<TurnTimer> {
   @override
   Widget build(BuildContext context) {
-    return const Text('Timer here');
+    return const CircularTimer(
+      duration: Duration(seconds: 30),
+      radius: 100,
+    );
   }
 }
