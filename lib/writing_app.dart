@@ -31,6 +31,7 @@ class _WritingAppState extends State<WritingApp> {
         ),
       ),
       home: Scaffold(
+        drawer: const Drawer(),
         appBar: appBar,
         backgroundColor: Colors.amber,
         body: SafeArea(

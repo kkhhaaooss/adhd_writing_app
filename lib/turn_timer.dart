@@ -11,10 +11,11 @@ class TurnTimer extends StatefulWidget {
 class _TurnTimerState extends State<TurnTimer> {
   @override
   Widget build(BuildContext context) {
-    return const CircularTimer(
+    final timerRadius = MediaQuery.sizeOf(context).height * .1;
+    return CircularTimer(
       repeat: true,
-      duration: Duration(minutes: 15),
-      radius: 100,
+      duration: const Duration(minutes: 15),
+      radius: timerRadius,
     );
   }
 }
