@@ -10,6 +10,9 @@ class TextInput extends StatefulWidget {
 class _TextInputState extends State<TextInput> {
   @override
   Widget build(BuildContext context) {
-    return const TextField();
+    return const TextField(
+      canRequestFocus: true,
+      onSubmitted: null,
+    );
   }
 }

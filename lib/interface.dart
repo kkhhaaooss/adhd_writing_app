@@ -15,28 +15,32 @@ class Interface extends StatefulWidget {
 class _InterfaceState extends State<Interface> {
   @override
   Widget build(BuildContext context) {
+    final screenWidth = null;
     return const SizedBox(
       width: double.infinity,
       child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            // TODO(kkhhaaooss): implement circular timer widget
-            TurnTimer(),
-            SizedBox(height: 40),
+        child: Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              // TODO(kkhhaaooss): implement circular timer widget
+              TurnTimer(),
+              SizedBox(height: 40),
 
-            // TODO(kkhhaaooss): implement last entered paragraph widget
-            LastParagraph(),
+              // TODO(kkhhaaooss): implement last entered paragraph widget
+              LastParagraph(),
 
-            // TODO(kkhhaaooss): implement text input box
-            TextInput(),
+              // TODO(kkhhaaooss): implement text input box
+              TextInput(),
 
-            // TODO(kkhhaaooss): implement pause/resume writing button
-            PauseResume(),
+              // TODO(kkhhaaooss): implement pause/resume writing button
+              PauseResume(),
 
-            // TODO(kkhhaaooss): implement progress bar
-            ProgressBar(),
-          ],
+              // TODO(kkhhaaooss): implement progress bar
+              ProgressBar(),
+            ],
+          ),
         ),
       ),
     );
