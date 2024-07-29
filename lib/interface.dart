@@ -1,4 +1,8 @@
+import 'package:adhd_writing_app/last_paragraph.dart';
+import 'package:adhd_writing_app/pause_resume.dart';
+import 'package:adhd_writing_app/progress_bar.dart';
 import 'package:adhd_writing_app/text_input.dart';
+import 'package:adhd_writing_app/turn_timer.dart';
 import 'package:flutter/material.dart';
 
 class Interface extends StatefulWidget {
@@ -11,47 +15,26 @@ class Interface extends StatefulWidget {
 class _InterfaceState extends State<Interface> {
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return const SizedBox(
       width: double.infinity,
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // TODO(kkhhaaooss): implement circular timer widget
-            Text(
-              'Timer',
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
+            TurnTimer(),
 
             // TODO(kkhhaaooss): implement last entered paragraph widget
-            const Text(
-              'Last paragraph entered',
-              style: TextStyle(
-                color: Colors.black,
-              ),
-            ),
+            LastParagraph(),
 
             // TODO(kkhhaaooss): implement text input box
-            const TextInput(),
+            TextInput(),
 
             // TODO(kkhhaaooss): implement pause/resume writing button
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text(
-                'Pause/Resume Writing Button',
-                style: TextStyle(
-                  color: Colors.black,
-                ),
-              ),
-            ),
+            PauseResume(),
 
             // TODO(kkhhaaooss): implement progress bar
-            const Text(
-              'Progress Bar',
-              style: TextStyle(
-                color: Colors.black,
-              ),
-            ),
+            ProgressBar(),
           ],
         ),
       ),
