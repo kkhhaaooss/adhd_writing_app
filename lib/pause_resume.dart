@@ -11,6 +11,7 @@ class _PauseResumeState extends State<PauseResume> {
   late bool isPaused = widget.isPaused;
   void pauseResume() {
     isPaused = !isPaused;
+    setState(() {});
   }
 
   @override
