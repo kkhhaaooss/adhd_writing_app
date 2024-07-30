@@ -29,12 +29,14 @@ class _InterfaceState extends State<Interface> {
             horizontal: widthPadding,
             vertical: heightPadding,
           ),
-          child: const Column(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               // TODO(kkhhaaooss): implement circular timer widget
               TurnTimer(
                 timerDuration: 10,
+                screenWidth: screenWidth,
+                screenHeight: screenHeight,
               ),
               SizedBox(height: 40),
 
