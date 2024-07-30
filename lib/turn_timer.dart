@@ -19,8 +19,8 @@ class TurnTimer extends StatefulWidget {
 
 class _TurnTimerState extends State<TurnTimer> {
   late int timerDuration = widget.timerDuration;
-  late double timerWidth = widget.screenWidth * .2;
-  late double timerHeight = widget.screenHeight * .2;
+  late double timerWidth = widget.screenWidth * .3;
+  late double timerHeight = widget.screenHeight * .3;
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +44,7 @@ class _TurnTimerState extends State<TurnTimer> {
         fontWeight: FontWeight.bold,
       ),
       textAlign: TextAlign.center,
-      textFormat: CountdownTextFormat.S,
+      textFormat: CountdownTextFormat.MM_SS,
       isReverse: true,
       isReverseAnimation: false,
       isTimerTextShown: true,

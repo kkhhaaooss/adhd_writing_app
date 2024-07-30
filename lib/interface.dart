@@ -34,7 +34,7 @@ class _InterfaceState extends State<Interface> {
             children: [
               // TODO(kkhhaaooss): implement circular timer widget
               TurnTimer(
-                timerDuration: 10,
+                timerDuration: 10 * 60,
                 screenWidth: screenWidth,
                 screenHeight: screenHeight,
               ),
