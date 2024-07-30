@@ -19,6 +19,7 @@ class _InterfaceState extends State<Interface> {
     final screenHeight = MediaQuery.sizeOf(context).height;
     final widthPadding = screenWidth * 0.05;
     final heightPadding = screenHeight * 0.05;
+    const bool isPaused = true;
 
     return SizedBox(
       width: screenWidth,
@@ -37,6 +38,7 @@ class _InterfaceState extends State<Interface> {
                 timerDuration: 10 * 60,
                 screenWidth: screenWidth,
                 screenHeight: screenHeight,
+                isPaused: isPaused,
               ),
               SizedBox(height: 40),
 

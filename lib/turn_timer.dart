@@ -6,12 +6,14 @@ class TurnTimer extends StatefulWidget {
     required this.timerDuration,
     required this.screenWidth,
     required this.screenHeight,
+    required this.isPaused,
     super.key,
   });
 
   final int timerDuration;
   final double screenWidth;
   final double screenHeight;
+  final bool isPaused;
 
   @override
   State<TurnTimer> createState() => _TurnTimerState();
@@ -21,6 +23,7 @@ class _TurnTimerState extends State<TurnTimer> {
   late int timerDuration = widget.timerDuration;
   late double timerWidth = widget.screenWidth * .3;
   late double timerHeight = widget.screenHeight * .3;
+  late bool started = !widget.isPaused;
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +51,7 @@ class _TurnTimerState extends State<TurnTimer> {
       isReverse: true,
       isReverseAnimation: false,
       isTimerTextShown: true,
-      autoStart: true,
+      autoStart: started,
       onStart: () {
         debugPrint('Countdown Started');
       },
