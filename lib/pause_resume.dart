@@ -8,11 +8,16 @@ class PauseResume extends StatefulWidget {
 }
 
 class _PauseResumeState extends State<PauseResume> {
+  late bool isPaused = widget.isPaused;
+  void pauseResume() {
+    isPaused = !isPaused;
+  }
+
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
-      child: widget.isPaused
+      onPressed: pauseResume,
+      child: isPaused
           ? const Text(
               'Resume Writing',
             )
