@@ -2,17 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 
 class TurnTimer extends StatefulWidget {
-  const TurnTimer({super.key});
+  const TurnTimer({required this.timerDuration, super.key});
+
+  final int timerDuration;
 
   @override
   State<TurnTimer> createState() => _TurnTimerState();
 }
 
 class _TurnTimerState extends State<TurnTimer> {
+  late int timerDuration = widget.timerDuration;
   @override
   Widget build(BuildContext context) {
     return CircularCountDownTimer(
-      duration: 10,
+      duration: timerDuration,
       initialDuration: 0,
       controller: CountDownController(),
       width: MediaQuery.of(context).size.width / 2,
@@ -35,7 +38,7 @@ class _TurnTimerState extends State<TurnTimer> {
       isReverse: false,
       isReverseAnimation: false,
       isTimerTextShown: true,
-      autoStart: false,
+      autoStart: true,
       onStart: () {
         debugPrint('Countdown Started');
       },

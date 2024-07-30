@@ -33,7 +33,9 @@ class _InterfaceState extends State<Interface> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               // TODO(kkhhaaooss): implement circular timer widget
-              TurnTimer(),
+              TurnTimer(
+                timerDuration: 10,
+              ),
               SizedBox(height: 40),
 
               // TODO(kkhhaaooss): implement last entered paragraph widget
