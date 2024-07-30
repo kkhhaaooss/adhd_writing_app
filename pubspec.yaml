@@ -7,7 +7,7 @@ environment:
   sdk: '>=3.4.3 <4.0.0'
 
 dependencies:
-  circular_timer: ^1.0.4
+  circular_countdown_timer: ^0.2.4
   flutter:
     sdk: flutter
   google_fonts: ^6.2.1
