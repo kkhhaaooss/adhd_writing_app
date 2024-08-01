@@ -30,8 +30,9 @@ class _InterfaceState extends State<Interface> {
             horizontal: widthPadding,
             vertical: heightPadding,
           ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+          child: ListView(
+            // mainAxisAlignment: MainAxisAlignment.spaceAround,
+            padding: const EdgeInsets.all(8.0),
             children: [
               // TODO(kkhhaaooss): implement circular timer widget
               TurnTimer(
@@ -40,19 +41,19 @@ class _InterfaceState extends State<Interface> {
                 screenHeight: screenHeight,
                 isPaused: isPaused,
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
 
               // TODO(kkhhaaooss): implement last entered paragraph widget
-              LastParagraph(),
+              const LastParagraph(),
 
               // TODO(kkhhaaooss): implement text input box
-              TextInput(),
+              const TextInput(),
 
               // TODO(kkhhaaooss): implement pause/resume writing button
-              PauseResume(),
+              const PauseResume(),
 
               // TODO(kkhhaaooss): implement progress bar
-              ProgressBar(),
+              const ProgressBar(),
             ],
           ),
         ),
