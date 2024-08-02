@@ -21,6 +21,10 @@ class _InterfaceState extends State<Interface> {
     final heightPadding = screenHeight * 0.05;
     const bool isPaused = true;
 
+    void _updateDisplay({required String text}) {
+      List<String> lines = text.split('\n');
+    }
+
     return SizedBox(
       width: screenWidth,
       height: screenHeight,
