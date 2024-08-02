@@ -1,7 +1,5 @@
-import 'package:adhd_writing_app/file_drawer.dart';
-import 'package:flutter/material.dart';
 import 'package:adhd_writing_app/interface.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/material.dart';
 
 class WritingApp extends StatefulWidget {
   const WritingApp({super.key});
@@ -11,40 +9,12 @@ class WritingApp extends StatefulWidget {
 }
 
 class _WritingAppState extends State<WritingApp> {
+  void _updateDisplay({required String text}) {
+    List<String> lines = text.split('\n');
+  }
+
   @override
   Widget build(BuildContext context) {
-    final AppBar appBar = AppBar(
-      title: const Text('Writing App With A Cool Name When I Think Of One'),
-      centerTitle: true,
-    );
-    return MaterialApp(
-      // TODO(kkhhaaooss): Separate theme data into separate file, updatable from settings
-      theme: ThemeData(
-        useMaterial3: true,
-        textTheme: TextTheme(
-          bodyMedium: GoogleFonts.merriweather(
-            color: Colors.black,
-            fontSize: 20,
-          ),
-        ),
-        buttonTheme: const ButtonThemeData(
-          padding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
-        ),
-      ),
-      home: Scaffold(
-        drawer: const Drawer(
-          child: FileDrawer(),
-        ),
-        appBar: appBar,
-        backgroundColor: Colors.amber,
-        body: SafeArea(
-          minimum: EdgeInsets.only(
-            top: appBar.preferredSize.height,
-          ),
-          top: true,
-          child: const Interface(),
-        ),
-      ),
-    );
+    return const Interface();
   }
 }
