@@ -10,6 +10,7 @@ dependencies:
   circular_countdown_timer: ^0.2.4
   flutter:
     sdk: flutter
+  flutter_file_dialog: ^3.0.2
   google_fonts: ^6.2.1
   linear_progress_bar: ^1.1.2
   uuid: ^4.4.2

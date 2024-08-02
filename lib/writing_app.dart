@@ -1,3 +1,4 @@
+import 'package:adhd_writing_app/file_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:adhd_writing_app/interface.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -31,7 +32,9 @@ class _WritingAppState extends State<WritingApp> {
         ),
       ),
       home: Scaffold(
-        drawer: const Drawer(),
+        drawer: const Drawer(
+          child: FileDrawer(),
+        ),
         appBar: appBar,
         backgroundColor: Colors.amber,
         body: SafeArea(
