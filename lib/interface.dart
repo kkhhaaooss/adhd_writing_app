@@ -75,7 +75,9 @@ class _InterfaceState extends State<Interface> {
                     const SizedBox(height: 40),
 
                     // TODO(kkhhaaooss): implement last entered paragraph widget
-                    const LastParagraph(),
+                    LastParagraph(
+                      text: 'This is the last paragraph entered...',
+                    ),
 
                     // TODO(kkhhaaooss): implement text input box
                     const TextInput(),
