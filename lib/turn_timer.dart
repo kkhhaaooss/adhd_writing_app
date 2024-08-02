@@ -20,6 +20,7 @@ class TurnTimer extends StatefulWidget {
   State<TurnTimer> createState() => _TurnTimerState();
 }
 
+// TODO (kkhhaaooss): Change size of timer when text input starts or stops
 class _TurnTimerState extends State<TurnTimer> {
   late int timerDuration = widget.timerDuration;
   late double timerWidth = widget.screenWidth * .3;

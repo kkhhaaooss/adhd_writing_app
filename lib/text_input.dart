@@ -8,6 +8,7 @@ class TextInput extends StatefulWidget {
   State<TextInput> createState() => _TextInputState();
 }
 
+// TODO (kkhhaaooss): Start timer when input starts and stop when input stops
 class _TextInputState extends State<TextInput> {
   final _textController = TextEditingController();
   final _textFocusNode = FocusNode();
