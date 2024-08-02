@@ -13,7 +13,7 @@ class _TextInputState extends State<TextInput> {
   final _textFocusNode = FocusNode();
   bool inputEnabled = true;
   Widget _buildTextInput() {
-    return TextField(
+    return TextFormField(
       controller: _textController,
       textCapitalization: TextCapitalization.sentences,
       canRequestFocus: true,
@@ -41,7 +41,7 @@ class _TextInputState extends State<TextInput> {
       // },
       onChanged: (text) => setState(() {}),
       // TODO: onSubmitted no longer catches a return key after expanding from single line input. Add a test for return to the onChanged that then calls what would normally be called from onSubmitted.
-      onSubmitted: (text) => setState(() {
+      onEditingComplete: () => setState(() {
         _textController.clear();
       }),
     );
