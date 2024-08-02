@@ -56,8 +56,33 @@ class _TextInputState extends State<TextInput> {
   }
 
   void _updateDisplay(text) {
-    setState(() {});
+    List<String> lines = _textController.text.split('\n');
+
+    // Update only after a return
+    if (lines.length > 1) {
+      // paragraphCount++;
+      // await SharedPrefs.saveInt('paragraphCount', paragraphCount);
+      // Clear the previously displayed paragraph and adds the just entered paragraph to the display
+      // _displayLines.clear(); // Clear for updates
+      // _displayLines.addAll(lines.getRange(0, 2));
+      _textController.clear();
+
+      // saveBytes = '${_displayLines[0]}\r\n';
+      // await FileStorage.writeCounter(saveBytes, fileName);
+      // //workaround for requestFocus not working in test
+      // pauseTimer();
+      // pauseTimer();
+      // _textFieldFocusNode.requestFocus();
+      setState(() {});
+
+      // Append the new paragraph to the file
+      // FileStorage.writeCounter(_displayLines[0], fileName);
+      // _saveParagraphToFile();
+    }
   }
+  // void _updateDisplay(text) {
+  //   setState(() {});
+  // }
 
   @override
   Widget build(BuildContext context) {
