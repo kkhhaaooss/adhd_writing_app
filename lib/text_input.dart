@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'package:adhd_writing_app/models/text_provider.dart';
 
 class TextInput extends StatefulWidget {
   const TextInput({super.key});
@@ -61,6 +63,7 @@ class _TextInputState extends State<TextInput> {
 
     // Update only after a return
     if (lines.length > 1) {
+      context.read<TextProvider>().updateText(_textController.text);
       // paragraphCount++;
       // await SharedPrefs.saveInt('paragraphCount', paragraphCount);
       // Clear the previously displayed paragraph and adds the just entered paragraph to the display
